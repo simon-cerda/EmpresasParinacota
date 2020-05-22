@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+  <body>
+    
+{% block content%}
+    <!-- END header -->
+    
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url(' {% static "mySiteWork/img/slider-2.JPG" %}');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center text-center">
+            <div class="col-md-7 col-sm-12 element-animate">
+              <h1 class="mb-4"> Empresa constructura Parinacota </h1>
+              
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-item" style="background-image: url(' {% static "mySiteWork/img/slider-2.JPG" %}');">
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center text-center">
+            <div class="col-md-8 col-sm-12 element-animate">
+              <h1 class="mb-4">Lider en el rubro de la construcción</h1>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </section>
+    <!-- END slider -->
+
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 pr-lg-5 mb-5 mb-md-0  element-animate">
+            <div class="pr-lg-5">
+              <h2 class="text-uppercase heading border-bottom mb-4 text-left">somos una empresa comprometida con nuestros clientes</h2>
+              <p>EMPRESAS PARINACOTA, nace con el nombre de la población donde la empresa ejecutó su primer trabajo. Se constituye el año 2003 en Santiago, con el objeto de ocupar en el sector de la construcción, espacios de gran importancia con gestión y profesionalismo. Construcción, rehabilitación, habilitación de interiores, edificación y obra civil, tanto para clientes privados como institucionales.</p>
+              <p>Nuestra inquietud fue, y sigue siendo, abrirnos camino en la “industria” de la construcción desmarcándonos de otras empresas, dotando a EMPRESAS PARINACOTA de los medios necesarios para que este lema se refleje en nuestras obras</p>
+              
+            </div>
+          </div>
+          <div class="col-md-6  element-animate">
+            <img src="{% static 'mySiteWork/img/work_thumb_12.JPG' %}" alt="" class="img-fluid2">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section border-t">
+      <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <h2 class="text-uppercase heading border-bottom mb-4">Nuestros Proyectos</h2>
+            <!-- <p class="mb-3 lead">10 años de experiencia nos avalan</p> -->
+            <p><a href="{% url 'obras_list' %}" class="btn btn-primary">ver todos los proyectos</a></p>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+
+          {% for instance in object_list %}
+         
+          <div class="col-md-4 element-animate">
+            <div class="media d-block media-custom text-left">
+              <a href="{% url 'detalle_obra' id=instance.id %}" class="link-thumbnail">
+                <span class="ion-plus icon"></span>
+                
+              <img src="{{instance.cover_img.url}}" alt="Image Placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="meta-post">{{instance.fecha_ref}}</span>
+                <h3 class="mt-0 text-black"><a href="#" class="text-black">{{instance.titulo}}</a></h3>
+                
+                
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          
+      </div>
+    </section>
+    <!-- END section -->
+
+   
+    {% endblock %}
+    
+
+
+
+
+
+</html>

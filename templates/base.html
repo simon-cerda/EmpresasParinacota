@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Empesa Parinacota</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/jquery.timepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'mySiteWork/fonts_test/ionicons/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mySiteWork/fonts_test/fontawesome/css/font-awesome.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'mySiteWork/fonts_test/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/dropzone.css' %}">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{% static 'mySiteWork/css_test/style.css' %}">
+
+
+
+  </head>
+  <body>
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+        <img class="navbar-brand position-absoulte" src="{% static 'mySiteWork/img/logo.svg' %}">
+       <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse position-relative" id="navbarsExample05">
+          <ul class="navbar-nav mx-auto pl-lg-5 pl-0 d-flex align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'obras_list' %}">Obras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'home' %}">Log in</a>
+            </li>
+            
+            <li class="nav-item cta-btn2">
+              <a class="nav-link" href="#">
+                <span class="d-inline-block px-4 py-2 border">Contactar Ahora</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+{%block content %}
+
+{% endblock %}
+<footer class="site-footer bg-dark" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" >
+        <iframe  height="300px" width="100%" src="https://maps.google.cl/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Av.+Larrain+%236642+of.+006-007-406,+La+Reina,+Santiago&amp;aq=&amp;sll=-33.668298,-70.363372&amp;sspn=1.730414,2.702637&amp;ie=UTF8&amp;hq=&amp;hnear=Larra%C3%ADn+6642,+La+Reina,+Santiago,+Regi%C3%B3n+Metropolitana&amp;t=m&amp;ll=-33.450511,-70.564005&amp;spn=0.007663,0.020041&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+        <!-- <div id="map"></div> -->
+      </div>
+      <div class="col-md-4">
+        <ul class="list-unstyled footer-link">
+          <li><span class="mr-3 d-block">Address:</span><span class="text-white">Av. Larrain #6642 of. 006-007-406, La Reina, Santiago
+          </span></li>
+          <li><span class="mr-3 d-block">Telefono:</span><span class="text-white">(+56 2) 2 277 80 20</span></li>
+          <li><span class="text-white">(+56 2) 2 277 80 40</span></li>
+          <li><span class="mr-3 d-block">E-mail:</span><span class="text-white">info@empresasparinacota.cl</span></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3 class="text-white">Quick Links</h3>
+        <ul class="list-unstyled footer-link">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+  <script src="{% static 'mySiteWork/js_test/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'mySiteWork/js_test/popper.min.js' %}"></script>
+  <script src="{% static 'mySiteWork/js_test/bootstrap.min.js' %}"></script>
+  <script src="{% static 'mySiteWork/js_test/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'mySiteWork/js_test/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'mySiteWork/js_test/main.js' %}"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwK2qOUotv70NjGBtFaUNGlBd5GYkVFq4&callback=initMap"></script>
+  
+
+    
+</body>
+</html>
+

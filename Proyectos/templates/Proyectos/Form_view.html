@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+  <body>
+    
+    
+    <!-- END header -->
+    
+
+    
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <form action="{% url 'form_view' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="titulo">Titulo Proyecto</label>
+                  <input type="text" class="form-control form-control-lg" name="titulo" id="titulo">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="fecha_ref">Fecha Referencial</label>
+                  <input type="date" class="form-control form-control-lg" name="fecha_ref" id='fecha_ref'>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="cliente">cliente</label>
+                  <input type="text" name="cliente"  class="form-control form-control-lg" id='cliente'>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="ubicación">Ubicación</label>
+                  <input type="text" name='ubicacion'  class="form-control form-control-lg" id='ubicacion'>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="message">Descripción del proyecto</label>
+                  <textarea name="descripcion"  class="form-control form-control-lg" cols="30" rows="8"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+              <label for="mycover">Portada del proyecto:</label>             
+     
+              <input type="file" id="mycover" name="cover_img" accept="image/*">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="myfile">Galeria de fotos:</label>             
+     
+              <input type="file" id="myfile" name="img" accept="image/*" multiple>
+            </div>
+            </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary btn-lg btn-block" id="submit-all">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <h5 class="text-uppercase mb-3">Address</h5>
+            <p class="mb-5">98 West 21th Street, <br> Suite 721 <br> New York NY 10016</p>
+            
+            <h5 class="text-uppercase mb-3">Email Us At</h5>
+            <p class="mb-5"><a href="mailto:info@yourdomain.com">info@yourdomain.com</a> <br> <a href="mailto:customer@yourdomain.com">customer@yourdomain.com</a></p>
+            
+            <h5 class="text-uppercase mb-3">Call Us</h5>
+            <p class="mb-5">Phone: (+1) 435 3533 <br> Mobile: (+1) 435 3533 <br> Fax: (+1) 435 3534</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+    <section class="container cta-overlap">
+      <div class="text d-flex">
+        <h2 class="h3">Contact Us For Projects or Need a Quotations</h2>
+        <div class="ml-auto btn-wrap">
+          <a href="get-quote.html" class="btn-cta btn btn-outline-white">Get A Quote</a>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+
+
+    {% endblock %}
+  
+</html>

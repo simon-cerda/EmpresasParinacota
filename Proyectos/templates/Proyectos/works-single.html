@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+ {% block content %}
+ 
+
+
+    <!-- END slider -->
+   
+    <section class="section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 mb-5">
+            <img src="/{{object.cover_img.url}}" alt="Image placeholder" class="img-fluid">
+          </div>
+        
+        
+        <div class="col-md-6 mb-5">
+            <p>{{object.fecha_ref}}<p>
+            <h2 class="text-uppercase heading mb-4">{{object.titulo}}</h2>
+            <p>{{object.descripcion}}</p>
+            <p>Cliente: {{object.cliente}} </p>
+            <p>Dirección: {{object.ubicacion}}</p>
+            </div>
+        </div>
+
+
+        <section class="section border-t">
+          <!-- <div class="container"> -->
+       
+            <div class="row no-gutters">
+              {% for foto in imagenes %}
+              
+              <div class="col-md-4 element-animate" style="padding:5px">
+                
+                  <img src="/{{foto.img.url}}" alt="Image Placeholder" class="img-fluid">
+                </a>
+              </div>
+
+              {% endfor %}
+             
+    
+            <!-- </div> -->
+          </div>
+</div>
+        </section>
+
+     
+    <!-- END section -->
+    
+    
+    
+{% endblock %}
