@@ -7,20 +7,20 @@
     <!-- END header -->
     
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image: url(' {% static "mySiteWork/img/slider-2.JPG" %}');">
+      <div type="video/mp4  style="background-image: url(' {% static "mySiteWork/img/DJI_0138.mp4" %}');">
         
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center text-center">
             <div class="col-md-7 col-sm-12 element-animate">
               <h1 class="mb-4"> Empresa constructura Parinacota </h1>
               
-              
+              <!-- lightbox -->
             </div>
           </div>
         </div>
 
       </div>
-
+<!-- 
       <div class="slider-item" style="background-image: url(' {% static "mySiteWork/img/slider-2.JPG" %}');">
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center text-center">
@@ -31,7 +31,7 @@
           </div>
         </div>
         
-      </div>
+      </div> -->
 
     </section>
     <!-- END slider -->
@@ -75,7 +75,7 @@
                 
               <img src="{{instance.cover_img.url}}" alt="Image Placeholder" class="img-fluid"></a>
               <div class="media-body">
-                <span class="meta-post">{{instance.fecha_ref}}</span>
+                
                 <h3 class="mt-0 text-black"><a href="#" class="text-black">{{instance.titulo}}</a></h3>
                 
                 
@@ -84,6 +84,44 @@
           </div>
           {% endfor %}
           
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 order-lg-3 mb-5">
+            <img src="{% static 'mySiteWork/img/slider-4.jpg' %}" alt="Image placeholder" class="img-fluid">
+          </div>
+          <div class="col-md-1 order-lg-2"></div>
+          <div class="col-md-5 order-lg-1">
+            <h2 class="text-uppercase heading mb-4">Nuestra Historia</h2>
+            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+
+            <ul class="list-unstyled check">
+              <li>Soluta sit quam minima</li>
+              <li>Consectetur adipisicing elit</li>
+              <li>Commodi unde impedit</li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-6 order-lg-1 mb-5">
+            <img src="{% static 'mySiteWork/img/slider-3.jpg' %}" alt="Image placeholder" class="img-fluid">
+          </div>
+          <div class="col-md-1 order-lg-2"></div>
+          <div class="col-md-5 order-lg-3">
+            <h2 class="text-uppercase heading mb-4">LLevamos 15 años en esta industria</h2>
+            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+
+            <ul class="list-unstyled check">
+              <li>Soluta sit quam minima</li>
+              <li>Consectetur adipisicing elit</li>
+              <li>Commodi unde impedit</li>
+            </ul>
+          </div>
+          
+        </div>
       </div>
     </section>
     <!-- END section -->
